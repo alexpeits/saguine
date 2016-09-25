@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for page in pages %}
+  <li><a href="{{ page.url }}">{{ page.name }}</a></li>
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ sitename }} - {% raw %}{{ pagetitle }}{% endraw %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/css/lib/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/css/lib/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="/static/css/saguine.css">
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">{{ sitename }}</a>
+      </div>
+      <ul class="nav navbar-nav">
+        {% for page in pages %}
+        <li><a href="{{ page.url }}">{{ page.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    {% raw %}{% block content %}{% endblock %}{% endraw %}
+  </div>
+  <footer class="footer">
+    <div class="container">
+      website generated using <a href="https://github.com/alexpeits/saguine" target="_blank">saguine</a>
+    </div>
+  </footer>
+  <script src="/static/js/lib/jquery-3.1.1.min.js"></script>
+  <script src="/static/js/lib/bootstrap.min.js"></script>
+  {% raw %}{% block scripts %}{% endblock %}{% endraw %}
+</body>
+</html>

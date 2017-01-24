@@ -1,0 +1,2 @@
+recursive-include saguine/templates/ *
+recursive-include saguine/static/ *

@@ -9,9 +9,9 @@ Installation
 
 ::
 
-    $ git clone https://github.com/alexpeits/saguine.git saguine
+    $ git clone https://github.com/alexpeits/saguine.git saguine && cd saguine
     $ mkvirtualenv --python=`which python3` saguine
-    $ pip install .
+    $ pip install .  # or "pip install -e ." for editable
 
 
 Usage
@@ -48,7 +48,7 @@ In this case, the ``site`` directory will look like this::
 
 Then, run::
 
-    $ saguine /path/to/myblog
+    $ saguine /path/to/myblog  # or "saguine ." if in the same directory
 
 This will copy any templates and static files, and generate the static site inside
 the "web" directory. This is the directory that should be served (github pages etc.)

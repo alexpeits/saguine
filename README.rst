@@ -25,13 +25,16 @@ First, create a project directory with the following structure::
        |- ...
 
 
-``config.yml`` must have the following format::
+``config.yml`` must have the following format:
+
+.. code:: yaml
 
     pages:
         - Home: index.md
         - Blog: blog
         - About: about.md
     sitename: My Blog
+
 
 In this case, the ``site`` directory will look like this::
 
